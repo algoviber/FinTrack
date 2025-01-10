@@ -28,40 +28,42 @@ Follow these steps to set up and run the application locally:
 ### Steps
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-username>/ExpenseTracker.git
-   cd ExpenseTracker
+   git clone https://github.com/<your-username>/FinTrack.git
    ```
 
 2. Install dependencies:
    ```bash
-   npm install
-   cd client
+   cd FinTrack
+   cd backend
    npm install
    cd ..
+   cd client
+   npm install
    ```
 
 3. Set up environment variables:
    - Create a `.env` file in the root directory.
    - Add the following variables:
      ```
-     PORT=5000
+     PORT=8000 || your port
      MONGO_URI=<your-mongodb-connection-string>
      ```
 
 4. Start the backend server:
    ```bash
-   npm run server
+   cd backend
+   npm run dev
    ```
 
 5. Start the frontend development server:
    ```bash
-   cd client
-   npm start
+   cd frontend
+   nodemon app.js
    ```
 
 6. Open your browser and navigate to:
    ```
-   http://localhost:3000
+   http://localhost:8000
    ```
 
 ## Application Workflow
